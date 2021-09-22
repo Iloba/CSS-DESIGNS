@@ -205,6 +205,9 @@ header .icons #menu-bars{
 	line-height: 1.5;
 }
 
+.swiper-pagination-bullet-active{
+	background: var(--green);
+}
 
 
 
@@ -232,6 +235,10 @@ header .icons #menu-bars{
 
 	header{
 		padding: 1rem 2rem;
+	}
+
+	section{
+		padding:2rem;
 	}
 
 }
@@ -268,6 +275,10 @@ header .icons #menu-bars{
  	width: 90%;
  	margin: 0 1rem;
  }
+
+ .home .home-slider .slide .content h3{
+	font-size: 5rem;
+	}
 }
 
 @media(max-width: 991px){
