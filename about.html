@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UI Design</title>
+	<link rel="stylesheet" type="text/css"  href="css/main.css">
+	 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">  
+</head>
+<body>
+	<div class="proto-container">
+		<div class="proto"></div>
+		<div class="proto"></div>
+		<div class="proto"></div>
+		<div class="proto"></div>
+	</div>
+	<div class="container">
+		<div class="inner">
+			<div class="left">
+				<img class="logo" src="img/profile-imgs.png">
+				<div class="content">
+					<h1>Complete <span>UI design Course</span></h1>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+					<p class="light">
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						
+					</p>
+				</div>
+			</div>
+			<div class="right">
+				<p>Get Notified when i release the course</p>
+				<input type="email" name="email" id="email" placeholder="your email">
+				<button>Notify Me</button>
+				<div class="attention">
+					<img class="me" src="img/sney.jpg">
+					<img class="arrow" src="img/curved-arrow.png">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		let left = document.querySelector('.left');
+		let content = document.querySelector('.content');
+		let protos = document.querySelectorAll('.proto');
+
+
+		left.addEventListener('mousemove', (event) => {
+			let move = (event.clientX * 0.05) + 4;
+			let move2 = (event.clientX * 0.003);
+
+			content.style.transform = `translateX(-${move2}%)`;
+
+			protos.forEach((proto) => {
+				proto.style.transform = `translateX(${move}%)`; 
+			})
+		})
+	</script>
+</body>
+</html>
