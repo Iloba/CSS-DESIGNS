@@ -15,7 +15,7 @@ let navLinks = document.querySelectorAll('header .navbar a');
 
 window.onscroll = () =>{
 	menu.classList.remove('fa-times');
-	navbar.classList.toggle('active');
+	// navbar.classList.toggle('active');
 
 
 
@@ -86,3 +86,15 @@ var swiper = new Swiper(".review-slider", {
 		}
 	},
 });
+
+
+function loader() {
+	document.querySelector('.loader-container').classList.add('fade-out');
+}
+
+function fadeOut(){
+	setInterval(loader, 3000)
+}
+
+window.onload = fadeOut;
+
